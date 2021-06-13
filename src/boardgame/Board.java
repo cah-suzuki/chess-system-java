@@ -41,5 +41,10 @@ public class Board {
 		return pieces [position.getRow()][position.getColumn()];
 	}
 	
+	public void placePiece(Piece piece, Position position) {
+		pieces[position.getRow()][position.getColumn()] = piece;
+		//posso acessar diretamente (sem o get) pois está declarado como protected e faz parte do msm pct
+		piece.position = position;
+	}
 	
 }
